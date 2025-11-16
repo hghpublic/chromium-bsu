@@ -1,0 +1,39 @@
+= Chromium B.S.U.
+:toc:
+:sectnums:
+:experimental:
+:icons: font
+
+== Chromium B.S.U.
+
+https://sourceforge.net/projects/chromium-bsu/
+
+https://en.wikipedia.org/wiki/Chromium_B.S.U.
+
+== Build & Run in Devcontainer
+
+
+build::
++
+[source, shell]
+----
+./build.sh
+----
+
+run::
++
+[source, shell]
+----
+./install/bin/chromium-bsu
+----
+
+== Todos
+
+. Clean up Dockerfile.
+.. Remove unneeded packages.
+.. Combine `deps` layers.
+
+== Issues
+
+Missing `m4` files copied from::
+https://sourceforge.net/projects/chromium-bsu/files/Chromium%20B.S.U.%20source%20code/chromium-bsu-0.9.16.1.tar.gz/download

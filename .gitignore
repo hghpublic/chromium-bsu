@@ -1,30 +1,5 @@
-.deps
-*.o
-*~
-*.m4
-autom4te.cache
-compile
-depcomp
-install-sh
-config.*
-configure
-chromium-bsu
-chromium-bsu-config.h*
-chromium-bsu-*/
-chromium-bsu-*.tar.gz
-chromium-bsu-*.tar.gz.asc
-Makefile
-Makefile.in*
-missing
-*.gmo
-*.pot
-ABOUT-NLS
-POTFILES
-po/*.header
-po/*.sed
-po/*.sin
-stamp-*
-po/Makevars.template
-po/Rules-quot
-misc/*.desktop
-misc/*.png
+# macos
+.DS_Store
+
+# cmake
+build/

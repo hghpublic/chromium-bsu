@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+    "name": "chromium-bsu",
+    "version": "0.9.16.1",
+    "dependencies": [
+        "opengl",
+        "ftgl",
+        "sdl2-mixer",
+        "sdl2-image",
+        "catch2",
+        "sdl2"
+    ]
+}

@@ -1,0 +1,55 @@
+= fonts-uralic
+
+https://launchpad.net/ubuntu/+source/fonts-uralic
+
+[source, shell]
+----
+sudo apt install fonts-uralic
+----
+
+Gothic Uralic bold::
+[source, shell]
+----
+❯ sudo apt install fonts-uralic
+
+❯ find /usr/share/fonts -type f -name "gothu*.ttf" 
+/usr/share/fonts/truetype/uralic/gothu___.ttf
+/usr/share/fonts/truetype/uralic/gothub__.ttf
+----
+
+
+----
+❯ apt info fonts-uralic                                     
+Package: fonts-uralic
+Version: 0.0.20040829-7
+Status: install ok installed
+Priority: optional
+Section: fonts
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Fonts Task Force <debian-fonts@lists.debian.org>
+Installed-Size: 1,420 kB
+Homepage: http://peoples.org.ru/eng_uralic.html
+Download-Size: unknown
+APT-Manual-Installed: yes
+APT-Sources: /var/lib/dpkg/status
+Description: Truetype fonts for Cyrillic-based Uralic languages
+ The Uralic fonts contain additional letters used in most Uralic languages
+ with Russian-based writing systems - Khanty (all dialects), Komi,
+ Mansi (without marking long vowels), Mari, Nenets, Selkup and Udmurt.
+ The fonts also support Altai, Chukchi, Even, Evenki, Koryak and Nanai.
+ .
+ Font list:
+    * Bookman Uralic (regular, bold, italic)
+    * Chancery Uralic - Decorative calligraphic font
+    * Gothic Uralic (regular, bold) - Futura-like sans serif
+    * Mono Uralic (regular) - Courier-like fixed width font
+    * Palladio Uralic (regular, bold, italic) - Palatino-like typeface
+    * Roman Uralic (regular, bold, italic) - Times-like typeface
+    * Sans Uralic (regular, bold, italic, bold italic) - Helvetica-like
+      sans serif typeface
+    * Sans Condensed Uralic (regular, bold) - Narrow version of Sans Uralic
+    * Schoolbook Uralic (regular, bold, italic)
+ .
+ These fonts cover the ISO10646-1 and CP1251 charsets.
+
+----

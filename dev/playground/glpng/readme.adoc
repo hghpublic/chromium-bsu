@@ -1,0 +1,17 @@
+= glpng
+
+James Le Cuirot
+
+OpenGL PNG image library
+
+https://repo.or.cz/glpng.git
+
+git://repo.or.cz/glpng.git
+
+
+== Stash
+
+
+CMake Dependencies using Fetch Content
+
+https://jonathanhamberg.com/posts/2019-01-27-cmake-dependencies-fetch-content/

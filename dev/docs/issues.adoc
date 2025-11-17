@@ -1,0 +1,11 @@
+
+= Issues
+
+== Audio
+
+----
+❯ /workspaces/chromium-bsu/build/chromium-bsu
+ALSA lib confmisc.c:165:(snd_config_get_card) Cannot get card index for 0
+couldn't open play stream: No such file or directory
+ERROR initializing audio - AudioSDLMixer::initSound()
+----

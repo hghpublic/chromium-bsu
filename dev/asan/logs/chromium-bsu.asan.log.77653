@@ -1,0 +1,617 @@
+
+=================================================================
+==77653==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd39f60 in ScreenItemAdd::addStraightWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:595
+    #4 0xaaaaadd3798c in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:270
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Direct leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd39f60 in ScreenItemAdd::addStraightWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:595
+    #4 0xaaaaadd3798c in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:270
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #9 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #10 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #11 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #12 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #13 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #14 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #15 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #16 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 768 byte(s) in 32 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a7ec in ScreenItemAdd::addStraightArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:643
+    #4 0xaaaaadd37b24 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:278
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 288 byte(s) in 12 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a79c in ScreenItemAdd::addStraightArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:638
+    #4 0xaaaaadd37b24 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:278
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 288 byte(s) in 12 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd37174 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:213
+    #3 0xaaaaadd3a730 in ScreenItemAdd::addStraightArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:631
+    #4 0xaaaaadd37b24 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:278
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 192 byte(s) in 8 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3733c in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:218
+    #3 0xaaaaadd3a730 in ScreenItemAdd::addStraightArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:631
+    #4 0xaaaaadd37b24 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:278
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 168 byte(s) in 7 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd39f60 in ScreenItemAdd::addStraightWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:595
+    #4 0xaaaaadd37b88 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:280
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a254 in ScreenItemAdd::addOmniWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:607
+    #4 0xaaaaadd37ba0 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:281
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #9 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #10 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #11 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #12 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #13 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #14 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #15 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #16 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a3d4 in ScreenItemAdd::addOmniWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:610
+    #4 0xaaaaadd37ba0 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:281
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a3d4 in ScreenItemAdd::addOmniWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:610
+    #4 0xaaaaadd37ba0 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:281
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #9 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #10 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #11 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #12 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #13 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #14 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #15 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #16 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd39f60 in ScreenItemAdd::addStraightWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:595
+    #4 0xaaaaadd3798c in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:270
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #9 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #10 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #11 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #12 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #13 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #14 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #15 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #16 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd37174 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:213
+    #3 0xaaaaadd3ab4c in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:665
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a254 in ScreenItemAdd::addOmniWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:607
+    #4 0xaaaaadd37ba0 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:281
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 96 byte(s) in 4 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd37174 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:213
+    #3 0xaaaaadd3aad4 in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:658
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 72 byte(s) in 3 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3733c in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:218
+    #3 0xaaaaadd3aad4 in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:658
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 72 byte(s) in 3 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a430 in ScreenItemAdd::addOmniWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:616
+    #4 0xaaaaadd37ba0 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:281
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #9 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #10 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #11 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #12 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #13 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #14 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #15 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #16 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 72 byte(s) in 3 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3c02c in ScreenItemAdd::addAmmunition(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:764
+    #3 0xaaaaadd37f48 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:306
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #8 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #9 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #10 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #11 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #12 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #13 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 72 byte(s) in 3 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd37174 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:213
+    #3 0xaaaaadd3aafc in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:661
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 72 byte(s) in 3 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3be94 in ScreenItemAdd::addAmmunition(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:759
+    #3 0xaaaaadd37f48 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:306
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #8 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #9 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #10 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #11 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #12 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #13 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 72 byte(s) in 3 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd39f60 in ScreenItemAdd::addStraightWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:595
+    #4 0xaaaaadd3798c in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:270
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 48 byte(s) in 2 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd39f60 in ScreenItemAdd::addStraightWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:595
+    #4 0xaaaaadd37b88 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:280
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #9 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #10 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #11 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #12 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #13 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #14 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #15 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #16 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 48 byte(s) in 2 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3733c in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:218
+    #3 0xaaaaadd3ab4c in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:665
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 48 byte(s) in 2 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3ca68 in ScreenItemAdd::addPowerUps(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:800
+    #3 0xaaaaadd37f70 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:307
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #8 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #9 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #10 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #11 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #12 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #13 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 48 byte(s) in 2 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3c1c4 in ScreenItemAdd::addAmmunition(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:769
+    #3 0xaaaaadd37f48 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:306
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #8 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #9 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #10 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #11 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #12 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #13 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 48 byte(s) in 2 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd36e80 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:207
+    #3 0xaaaaadd3a430 in ScreenItemAdd::addOmniWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:616
+    #4 0xaaaaadd37ba0 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:281
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 48 byte(s) in 2 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd37174 in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:213
+    #3 0xaaaaadd3ab24 in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:663
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 48 byte(s) in 2 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3733c in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:218
+    #3 0xaaaaadd3aafc in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:661
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3cd6c in ScreenItemAdd::addPowerUps(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:811
+    #3 0xaaaaadd37f70 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:307
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #8 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #9 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #10 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #11 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #12 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #13 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #14 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #15 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3cbe4 in ScreenItemAdd::addPowerUps(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:805
+    #3 0xaaaaadd37f70 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:307
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #8 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #9 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #10 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #11 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #12 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #13 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3cd6c in ScreenItemAdd::addPowerUps(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:811
+    #3 0xaaaaadd37f70 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:307
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #8 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #9 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #10 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #11 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #12 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #13 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3c1c4 in ScreenItemAdd::addAmmunition(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:769
+    #3 0xaaaaadd37f48 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:306
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #8 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #9 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #10 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #11 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #12 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #13 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #14 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #15 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3be94 in ScreenItemAdd::addAmmunition(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:759
+    #3 0xaaaaadd37f48 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:306
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #8 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #9 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #10 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #11 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #12 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #13 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #14 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #15 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3c02c in ScreenItemAdd::addAmmunition(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:764
+    #3 0xaaaaadd37f48 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:306
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #8 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #9 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #10 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #11 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #12 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #13 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #14 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #15 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3733c in ScreenItemAdd::addWave(EnemyWave&) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:218
+    #3 0xaaaaadd3ab24 in ScreenItemAdd::addOmniArrowWave(int, int, float) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:663
+    #4 0xaaaaadd37b50 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:279
+    #5 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #6 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #7 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #8 0xaaaaadd23824 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:407
+    #9 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #10 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #11 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #12 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #13 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #14 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0xffffae0f8324 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0xaaaaadd36480 in ScreenItemAdd::addItem(int, ScreenItem*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:165
+    #2 0xaaaaadd3ca68 in ScreenItemAdd::addPowerUps(int, int, int, int, int) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:800
+    #3 0xaaaaadd37f70 in ScreenItemAdd::loadLevelXXX() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:307
+    #4 0xaaaaadd38000 in ScreenItemAdd::loadLevel1() /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:313
+    #5 0xaaaaadd363f4 in ScreenItemAdd::loadScreenItems(char const*) /workspaces/chromium-bsu/src/ScreenItemAdd.cpp:143
+    #6 0xaaaaadcf87a0 in Global::newGame() /workspaces/chromium-bsu/src/Global.cpp:158
+    #7 0xaaaaadd2d824 in MenuGL::activateItem() /workspaces/chromium-bsu/src/MenuGL.cpp:771
+    #8 0xaaaaadd2d700 in MenuGL::keyHit(MainToolkit::Key) /workspaces/chromium-bsu/src/MenuGL.cpp:755
+    #9 0xaaaaadd23b68 in MainSDL::keyDown(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:424
+    #10 0xaaaaadd20678 in MainSDL::process(SDL_Event*) /workspaces/chromium-bsu/src/MainSDL_Event.cpp:107
+    #11 0xaaaaadd1e94c in MainSDL::run() /workspaces/chromium-bsu/src/MainSDL.cpp:206
+    #12 0xaaaaadd1a558 in main /workspaces/chromium-bsu/src/main.cpp:168
+    #13 0xffffad9584c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #14 0xffffad958594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #15 0xaaaaadcc79ac in _start (/workspaces/chromium-bsu/build/chromium-bsu+0x379ac) (BuildId: b2e85ad0d22a08b608572ac4ff51998a7f3f7ed4)
+
+-----------------------------------------------------
+Suppressions used:
+  count      bytes template
+    441      99164 libGLX_mesa.so.0
+-----------------------------------------------------
+
+SUMMARY: AddressSanitizer: 3384 byte(s) leaked in 141 allocation(s).

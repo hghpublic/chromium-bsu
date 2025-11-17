@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.58])
+AC_PREREQ([2.71])
 
 AC_INIT([Chromium B.S.U.],[0.9.16.1],[https://sf.net/p/chromium-bsu/bugs],[chromium-bsu])
 AM_INIT_AUTOMAKE([foreign])
@@ -14,7 +14,7 @@ AC_PROG_CXX
 PKG_PROG_PKG_CONFIG
 
 # Headers
-AC_HEADER_STDC
+
 AC_CHECK_HEADERS([fcntl.h stdlib.h string.h unistd.h locale.h libintl.h])
 
 # Types and compiler bits

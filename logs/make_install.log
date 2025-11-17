@@ -1,0 +1,107 @@
+Making install in po
+make[1]: Entering directory '/workspaces/chromium-bsu/po'
+installing bg.gmo as /workspaces/chromium-bsu/install/share/locale/bg/LC_MESSAGES/chromium-bsu.mo
+installing de.gmo as /workspaces/chromium-bsu/install/share/locale/de/LC_MESSAGES/chromium-bsu.mo
+installing es.gmo as /workspaces/chromium-bsu/install/share/locale/es/LC_MESSAGES/chromium-bsu.mo
+installing fr.gmo as /workspaces/chromium-bsu/install/share/locale/fr/LC_MESSAGES/chromium-bsu.mo
+installing it.gmo as /workspaces/chromium-bsu/install/share/locale/it/LC_MESSAGES/chromium-bsu.mo
+installing ro.gmo as /workspaces/chromium-bsu/install/share/locale/ro/LC_MESSAGES/chromium-bsu.mo
+installing ru.gmo as /workspaces/chromium-bsu/install/share/locale/ru/LC_MESSAGES/chromium-bsu.mo
+installing sv.gmo as /workspaces/chromium-bsu/install/share/locale/sv/LC_MESSAGES/chromium-bsu.mo
+installing zh_CN.gmo as /workspaces/chromium-bsu/install/share/locale/zh_CN/LC_MESSAGES/chromium-bsu.mo
+installing zh_TW.gmo as /workspaces/chromium-bsu/install/share/locale/zh_TW/LC_MESSAGES/chromium-bsu.mo
+installing tr.gmo as /workspaces/chromium-bsu/install/share/locale/tr/LC_MESSAGES/chromium-bsu.mo
+if test "chromium-bsu" = "gettext-tools"; then \
+  /usr/bin/mkdir -p /workspaces/chromium-bsu/install/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -c -m 644 ./$file \
+		    /workspaces/chromium-bsu/install/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /workspaces/chromium-bsu/install/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/workspaces/chromium-bsu/po'
+Making install in misc
+make[1]: Entering directory '/workspaces/chromium-bsu/misc'
+make[2]: Entering directory '/workspaces/chromium-bsu/misc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/share/icons/hicolor/64x64/apps'
+ /usr/bin/install -c -m 644 ../data/png/hero.png '/workspaces/chromium-bsu/install/share/icons/hicolor/64x64/apps'
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/share/man/man6'
+ /usr/bin/install -c -m 644 chromium-bsu.6 '/workspaces/chromium-bsu/install/share/man/man6'
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/share/applications'
+ /usr/bin/install -c -m 644 chromium-bsu.desktop '/workspaces/chromium-bsu/install/share/applications'
+make  install-data-hook
+make[3]: Entering directory '/workspaces/chromium-bsu/misc'
+mv /workspaces/chromium-bsu/install/share/icons/hicolor/64x64/apps/hero.png /workspaces/chromium-bsu/install/share/icons/hicolor/64x64/apps/chromium-bsu.png
+make[3]: Leaving directory '/workspaces/chromium-bsu/misc'
+make[2]: Leaving directory '/workspaces/chromium-bsu/misc'
+make[1]: Leaving directory '/workspaces/chromium-bsu/misc'
+Making install in src
+make[1]: Entering directory '/workspaces/chromium-bsu/src'
+make[2]: Entering directory '/workspaces/chromium-bsu/src'
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/bin'
+  /usr/bin/install -c chromium-bsu '/workspaces/chromium-bsu/install/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/workspaces/chromium-bsu/src'
+make[1]: Leaving directory '/workspaces/chromium-bsu/src'
+Making install in m4
+make[1]: Entering directory '/workspaces/chromium-bsu/m4'
+make[2]: Entering directory '/workspaces/chromium-bsu/m4'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/workspaces/chromium-bsu/m4'
+make[1]: Leaving directory '/workspaces/chromium-bsu/m4'
+Making install in data
+make[1]: Entering directory '/workspaces/chromium-bsu/data'
+Making install in doc
+make[2]: Entering directory '/workspaces/chromium-bsu/data/doc'
+Making install in images
+make[3]: Entering directory '/workspaces/chromium-bsu/data/doc/images'
+make[4]: Entering directory '/workspaces/chromium-bsu/data/doc/images'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/share/doc/chromium-bsu/images'
+ /usr/bin/install -c -m 644 heroAmmo00.jpg heroAmmo01.jpg heroAmmo02.jpg powerUp00.jpg powerUp01.jpg powerUp02.jpg useItem00.jpg '/workspaces/chromium-bsu/install/share/doc/chromium-bsu/images'
+make[4]: Leaving directory '/workspaces/chromium-bsu/data/doc/images'
+make[3]: Leaving directory '/workspaces/chromium-bsu/data/doc/images'
+make[3]: Entering directory '/workspaces/chromium-bsu/data/doc'
+make[4]: Entering directory '/workspaces/chromium-bsu/data/doc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/share/doc/chromium-bsu'
+ /usr/bin/install -c -m 644 faq.html info.html '/workspaces/chromium-bsu/install/share/doc/chromium-bsu'
+make[4]: Leaving directory '/workspaces/chromium-bsu/data/doc'
+make[3]: Leaving directory '/workspaces/chromium-bsu/data/doc'
+make[2]: Leaving directory '/workspaces/chromium-bsu/data/doc'
+Making install in png
+make[2]: Entering directory '/workspaces/chromium-bsu/data/png'
+make[3]: Entering directory '/workspaces/chromium-bsu/data/png'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/share/chromium-bsu/png'
+ /usr/bin/install -c -m 644 check.png chrome.jpg cursor.png darken.png elect.png electric.png enemy00.png enemy01-extra.png enemy01.png enemy01-rot.png enemy02.png enemy03-extra.png enemy03.png enemy04.png enemy05.png enemy06.png enemyAmmo00.png enemyAmmo01.png enemyAmmo02.png enemyAmmo03.png enemyAmmo04.png enemyAmmoExplo00.png enemyAmmoExplo01.png enemyAmmoExplo02.png enemyAmmoExplo03.png enemyAmmoExplo04.png enemyExplo.png explo.png glitter.png gndBaseSea.png gndMetalBase00.png gndMetalBase01.png gndMetalBase02.png gndMetalBlip.png heroAmmo00.png heroAmmo01.png heroAmmo02.png heroAmmoExplo00.png heroAmmoExplo01.png heroAmmoExplo02.png '/workspaces/chromium-bsu/install/share/chromium-bsu/png'
+ /usr/bin/install -c -m 644 heroAmmoFlash00.png heroAmmoFlash01.png heroAmmoFlash02.png heroExplo00.png heroExplo01.png heroExplo02.png hero.png heroShields.png heroSuper.png icon32.png life.png menu_back.png menu_updown.png powerUpAmmo.png powerUpShield.png powerUpTex.png reflect-blend.png reflect-gnd.png reflect.png shields.png statBar.png stat-top.png superBomb.png useFocus.png useItem00.png useItem01.png '/workspaces/chromium-bsu/install/share/chromium-bsu/png'
+make[3]: Leaving directory '/workspaces/chromium-bsu/data/png'
+make[2]: Leaving directory '/workspaces/chromium-bsu/data/png'
+Making install in wav
+make[2]: Entering directory '/workspaces/chromium-bsu/data/wav'
+make[3]: Entering directory '/workspaces/chromium-bsu/data/wav'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/workspaces/chromium-bsu/install/share/chromium-bsu/wav'
+ /usr/bin/install -c -m 644 boom.wav exploBig.wav exploPop.wav exploStd.wav life_add.wav life_lose.wav music_game.wav music_menu.wav power.wav '/workspaces/chromium-bsu/install/share/chromium-bsu/wav'
+make[3]: Leaving directory '/workspaces/chromium-bsu/data/wav'
+make[2]: Leaving directory '/workspaces/chromium-bsu/data/wav'
+make[2]: Entering directory '/workspaces/chromium-bsu/data'
+make[3]: Entering directory '/workspaces/chromium-bsu/data'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workspaces/chromium-bsu/data'
+make[2]: Leaving directory '/workspaces/chromium-bsu/data'
+make[1]: Leaving directory '/workspaces/chromium-bsu/data'
+make[1]: Entering directory '/workspaces/chromium-bsu'
+make[2]: Entering directory '/workspaces/chromium-bsu'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/workspaces/chromium-bsu'
+make[1]: Leaving directory '/workspaces/chromium-bsu'

@@ -1,0 +1,21 @@
+
+{
+	"folders": [
+        {
+            "path": "..",
+            "name": "root"
+        },
+        {
+            "path": "../dev/playground/glpng/example",
+            "name": "dev/playground/glpng/example"
+        },
+        {
+            "path": "../dev/playground/glut/example",
+            "name": "dev/playground/glut/example"
+        },
+        {
+            "path": "../dev/playground/SDL2_mixer/play_music_game",
+            "name": "dev/playground/SDL2_mixer/play_music_game"
+        }
+    ]
+}
